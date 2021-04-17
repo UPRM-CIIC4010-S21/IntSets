@@ -29,7 +29,7 @@ double average(vector<int> v)
 int find(const vector<int> &v, int key) 
 {
     for (int i=0; i<v.size(); i++) {
-        if (v[i] == key) return i;
+        if (v[i] == key) { return i; }
     }
     return -1;
 
@@ -70,7 +70,14 @@ vector<int> intersection(vector<int> A, vector<int> B)
 
     vector<int> result;
 
-    // YOUR CODE
+    for (int i=0; i<A.size(); i++) {
+        for (int j=0; B.size(); j++) {
+            if (A[i] == B[j]) {
+                 prepend(result, A[i]);
+                 break;
+            }
+        }
+    }
 
     return result;
 
